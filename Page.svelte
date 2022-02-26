@@ -2,7 +2,8 @@
 </script>
 
 <main>
-  <h1>minami funakoshi | they/them | journalist</h1>
+  <h1>minami funakoshi</h1>
+  <h5>they/them | journalist</h5>
 </main>
 
 <style lang="scss">
