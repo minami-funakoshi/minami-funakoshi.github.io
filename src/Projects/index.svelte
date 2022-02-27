@@ -4,7 +4,7 @@
 </script>
 
 <section class="projects">
-  <h2>Projects</h2>
+  <h2>Selected projects</h2>
   <hr />
   <div class="graphics">
     <h3>Graphics</h3>
@@ -25,7 +25,11 @@
 
 <style lang="scss">
   h3 {
+    text-transform: lowercase;
+    font-size: 1.15rem;
     font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #666;
     margin-bottom: 0;
   }
 

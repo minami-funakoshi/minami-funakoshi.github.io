@@ -12,5 +12,7 @@
   p {
     text-align: center;
     color: #666;
+    font-weight: 300;
+    // font-size: 1rem;
   }
 </style>

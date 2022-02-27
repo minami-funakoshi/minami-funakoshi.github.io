@@ -11,8 +11,10 @@
       Minami Funakoshi is a nonbinary graphics journalist at <a
         target="_blank"
         href="https://graphics.reuters.com/">Reuters</a
-      > based in Austin, Texas. They report, write, code, make data visualisations
-      and develop tools.
+      >
+      based in Austin, Texas. They report, write, code, make data visualisations
+      and develop tools. They have worked as a mentor at Columbia Journalism School’s
+      <a href="https://ledeprogram.com/" target="_blank">Lede </a> programme.
     </p>
     <p>
       Previously, they were a <a
@@ -54,11 +56,6 @@
     margin-left: -5px;
   }
 
-  p,
-  i {
-    font-size: 1.1rem;
-  }
-
   .short-bio {
     display: flex;
     p {
@@ -74,13 +71,6 @@
     }
   }
 
-  .full-bio {
-    a {
-      text-decoration: underline;
-      // color: #435f76;
-    }
-  }
-
   .contact {
     a {
       color: #999999;
@@ -88,6 +78,9 @@
     }
     a:first-child {
       margin-left: 0;
+    }
+    i {
+      font-size: 1.1rem;
     }
   }
 

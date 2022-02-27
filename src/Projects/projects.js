@@ -1,3 +1,8 @@
+/* 
+See data here:
+https://docs.google.com/spreadsheets/d/1Xn5xl_ZDAhaKwYunABv0X7Q0GsiiKCmLe9wiA4BGX2k/edit#gid=0
+*/
+
 export const graphics = [
     {
         'headline': 'HEADLINE 1',

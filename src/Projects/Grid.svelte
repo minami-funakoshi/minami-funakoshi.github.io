@@ -1,6 +1,6 @@
 <script>
   export let projects;
-  console.log('projects', projects);
+  // console.log('projects', projects);
 </script>
 
 <div class="grid-container">
