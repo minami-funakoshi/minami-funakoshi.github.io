@@ -62,6 +62,10 @@ var app = (function () {
     function space() {
         return text(' ');
     }
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return () => node.removeEventListener(event, handler, options);
+    }
     function attr(node, attribute, value) {
         if (value == null)
             node.removeAttribute(attribute);
@@ -344,6 +348,19 @@ var app = (function () {
         dispatch_dev('SvelteDOMRemove', { node });
         detach(node);
     }
+    function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation) {
+        const modifiers = options === true ? ['capture'] : options ? Array.from(Object.keys(options)) : [];
+        if (has_prevent_default)
+            modifiers.push('preventDefault');
+        if (has_stop_propagation)
+            modifiers.push('stopPropagation');
+        dispatch_dev('SvelteDOMAddEventListener', { node, event, handler, modifiers });
+        const dispose = listen(node, event, handler, options);
+        return () => {
+            dispatch_dev('SvelteDOMRemoveEventListener', { node, event, handler, modifiers });
+            dispose();
+        };
+    }
     function attr_dev(node, attribute, value) {
         attr(node, attribute, value);
         if (value == null)
@@ -465,25 +482,25 @@ var app = (function () {
     			p3.textContent = "International Chinese Language Program";
     			add_location(h2, file$5, 1, 2, 30);
     			add_location(hr, file$5, 2, 2, 51);
-    			attr_dev(h30, "class", "svelte-lufun");
+    			attr_dev(h30, "class", "svelte-1b96tyy");
     			add_location(h30, file$5, 4, 4, 70);
     			add_location(i, file$5, 5, 27, 122);
-    			attr_dev(p0, "class", "svelte-lufun");
+    			attr_dev(p0, "class", "svelte-1b96tyy");
     			add_location(p0, file$5, 5, 4, 99);
     			add_location(div0, file$5, 3, 2, 60);
-    			attr_dev(h31, "class", "svelte-lufun");
+    			attr_dev(h31, "class", "svelte-1b96tyy");
     			add_location(h31, file$5, 8, 4, 170);
-    			attr_dev(p1, "class", "svelte-lufun");
+    			attr_dev(p1, "class", "svelte-1b96tyy");
     			add_location(p1, file$5, 9, 4, 203);
     			add_location(div1, file$5, 7, 2, 160);
-    			attr_dev(h32, "class", "svelte-lufun");
+    			attr_dev(h32, "class", "svelte-1b96tyy");
     			add_location(h32, file$5, 12, 4, 268);
-    			attr_dev(p2, "class", "svelte-lufun");
+    			attr_dev(p2, "class", "svelte-1b96tyy");
     			add_location(p2, file$5, 13, 4, 301);
     			add_location(div2, file$5, 11, 2, 258);
-    			attr_dev(h33, "class", "svelte-lufun");
+    			attr_dev(h33, "class", "svelte-1b96tyy");
     			add_location(h33, file$5, 16, 4, 375);
-    			attr_dev(p3, "class", "svelte-lufun");
+    			attr_dev(p3, "class", "svelte-1b96tyy");
     			add_location(p3, file$5, 17, 4, 415);
     			add_location(div3, file$5, 15, 2, 365);
     			attr_dev(section, "class", "education");
@@ -654,17 +671,17 @@ var app = (function () {
     			t23 = space();
     			a5 = element("a");
     			i2 = element("i");
-    			attr_dev(h1, "class", "svelte-3g78ux");
+    			attr_dev(h1, "class", "svelte-1yujwuu");
     			add_location(h1, file$4, 1, 2, 26);
-    			attr_dev(p0, "class", "svelte-3g78ux");
+    			attr_dev(p0, "class", "svelte-1yujwuu");
     			add_location(p0, file$4, 3, 4, 82);
-    			attr_dev(p1, "class", "svelte-3g78ux");
+    			attr_dev(p1, "class", "svelte-1yujwuu");
     			add_location(p1, file$4, 4, 4, 103);
-    			attr_dev(p2, "class", "svelte-3g78ux");
+    			attr_dev(p2, "class", "svelte-1yujwuu");
     			add_location(p2, file$4, 5, 4, 125);
-    			attr_dev(p3, "class", "svelte-3g78ux");
+    			attr_dev(p3, "class", "svelte-1yujwuu");
     			add_location(p3, file$4, 6, 4, 144);
-    			attr_dev(div0, "class", "short-bio svelte-3g78ux");
+    			attr_dev(div0, "class", "short-bio svelte-1yujwuu");
     			add_location(div0, file$4, 2, 2, 54);
     			attr_dev(a0, "target", "_blank");
     			attr_dev(a0, "href", "https://graphics.reuters.com/");
@@ -680,27 +697,27 @@ var app = (function () {
     			add_location(p6, file$4, 25, 4, 939);
     			attr_dev(div1, "class", "full-bio");
     			add_location(div1, file$4, 8, 2, 172);
-    			attr_dev(i0, "class", "fa fa-twitter svelte-3g78ux");
+    			attr_dev(i0, "class", "fa fa-twitter svelte-1yujwuu");
     			add_location(i0, file$4, 33, 7, 1157);
     			attr_dev(a3, "target", "_blank");
     			attr_dev(a3, "href", "https://twitter.com/MinamiFunakoshi");
-    			attr_dev(a3, "class", "svelte-3g78ux");
+    			attr_dev(a3, "class", "svelte-1yujwuu");
     			add_location(a3, file$4, 32, 4, 1088);
-    			attr_dev(i1, "class", "fa fa-envelope svelte-3g78ux");
+    			attr_dev(i1, "class", "fa fa-envelope svelte-1yujwuu");
     			add_location(i1, file$4, 36, 7, 1268);
     			attr_dev(a4, "target", "_blank");
     			attr_dev(a4, "href", "mailto: minami.funakoshi@gmail.com");
-    			attr_dev(a4, "class", "svelte-3g78ux");
+    			attr_dev(a4, "class", "svelte-1yujwuu");
     			add_location(a4, file$4, 35, 4, 1200);
-    			attr_dev(i2, "class", "fa fa-linkedin svelte-3g78ux");
+    			attr_dev(i2, "class", "fa fa-linkedin svelte-1yujwuu");
     			add_location(i2, file$4, 39, 7, 1385);
     			attr_dev(a5, "target", "_blank");
     			attr_dev(a5, "href", "https://www.linkedin.com/in/mfunakoshi/");
-    			attr_dev(a5, "class", "svelte-3g78ux");
+    			attr_dev(a5, "class", "svelte-1yujwuu");
     			add_location(a5, file$4, 38, 4, 1312);
-    			attr_dev(div2, "class", "contact svelte-3g78ux");
+    			attr_dev(div2, "class", "contact svelte-1yujwuu");
     			add_location(div2, file$4, 31, 2, 1062);
-    			attr_dev(section, "class", "intro svelte-3g78ux");
+    			attr_dev(section, "class", "intro svelte-1yujwuu");
     			add_location(section, file$4, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -843,14 +860,14 @@ var app = (function () {
     		org: "Society of Publishers in Asia (SOPA)",
     		year: 2017,
     		description: "Japan's abuse of asylum seekers",
-    		link: "https: //2017.sopawards.com/wp-content/uploads/2017/03/Japans-abuse-of-asylum-seekers.pdf"
+    		link: "https://2017.sopawards.com/wp-content/uploads/2017/03/Japans-abuse-of-asylum-seekers.pdf"
     	},
     	{
     		award: "Finalist for business reporting",
     		org: "SOPA",
     		year: 2017,
     		description: "BOJ loses its mojo",
-    		link: "https: //2017.sopawards.com/wp-content/uploads/2017/03/BOJ-loses-its-mojo.pdf"
+    		link: "https://2017.sopawards.com/wp-content/uploads/2017/03/BOJ-loses-its-mojo.pdf"
     	},
     	{
     		award: "Elmore A. Willetts Prize for Fiction",
@@ -880,7 +897,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "description svelte-1fnh816");
+    			attr_dev(p, "class", "description svelte-bn4qmq");
     			add_location(p, file$3, 17, 8, 444);
     		},
     		m: function mount(target, anchor) {
@@ -905,7 +922,7 @@ var app = (function () {
     }
 
     // (13:6) {#if award.link}
-    function create_if_block$1(ctx) {
+    function create_if_block$2(ctx) {
     	let p;
     	let a;
     	let t_value = /*award*/ ctx[0].description + "";
@@ -919,7 +936,7 @@ var app = (function () {
     			attr_dev(a, "href", /*award*/ ctx[0].link);
     			attr_dev(a, "target", "_blank");
     			add_location(a, file$3, 14, 10, 346);
-    			attr_dev(p, "class", "description svelte-1fnh816");
+    			attr_dev(p, "class", "description svelte-bn4qmq");
     			add_location(p, file$3, 13, 8, 312);
     		},
     		m: function mount(target, anchor) {
@@ -935,7 +952,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$1.name,
+    		id: create_if_block$2.name,
     		type: "if",
     		source: "(13:6) {#if award.link}",
     		ctx
@@ -962,7 +979,7 @@ var app = (function () {
     	let t6;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*award*/ ctx[0].link) return create_if_block$1;
+    		if (/*award*/ ctx[0].link) return create_if_block$2;
     		return create_else_block;
     	}
 
@@ -983,13 +1000,13 @@ var app = (function () {
     			t5 = space();
     			if_block.c();
     			t6 = space();
-    			attr_dev(p0, "class", "award svelte-1fnh816");
+    			attr_dev(p0, "class", "award svelte-bn4qmq");
     			add_location(p0, file$3, 9, 6, 170);
-    			attr_dev(p1, "class", "org svelte-1fnh816");
+    			attr_dev(p1, "class", "org svelte-bn4qmq");
     			add_location(p1, file$3, 10, 6, 211);
-    			attr_dev(p2, "class", "year svelte-1fnh816");
+    			attr_dev(p2, "class", "year svelte-bn4qmq");
     			add_location(p2, file$3, 11, 6, 248);
-    			attr_dev(div, "class", "container svelte-1fnh816");
+    			attr_dev(div, "class", "container svelte-bn4qmq");
     			add_location(div, file$3, 8, 4, 140);
     		},
     		m: function mount(target, anchor) {
@@ -1149,73 +1166,104 @@ var app = (function () {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[2] = list[i].headline;
-    	child_ctx[3] = list[i].dek;
-    	child_ctx[4] = list[i].link;
-    	child_ctx[5] = list[i].imgSrc;
-    	child_ctx[6] = list[i].videoSrc;
-    	child_ctx[7] = list[i].posterSrc;
-    	child_ctx[2] = list[i].headline;
-    	child_ctx[4] = list[i].link;
-    	child_ctx[9] = i;
+    	child_ctx[5] = list[i].headline;
+    	child_ctx[6] = list[i].dek;
+    	child_ctx[7] = list[i].link;
+    	child_ctx[8] = list[i].awards;
+    	child_ctx[9] = list[i].imgSrc;
+    	child_ctx[10] = list[i].videoSrc;
+    	child_ctx[11] = list[i].posterSrc;
+    	child_ctx[5] = list[i].headline;
+    	child_ctx[7] = list[i].link;
+    	child_ctx[13] = i;
     	return child_ctx;
     }
 
-    // (29:29) 
-    function create_if_block_1(ctx) {
+    function get_each_context_1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[14] = list[i];
+    	return child_ctx;
+    }
+
+    // (30:29) 
+    function create_if_block_2(ctx) {
     	let video;
     	let source;
     	let source_src_value;
     	let t;
     	let video_poster_value;
+    	let video_id_value;
+    	let video_is_paused = true;
+    	let mounted;
+    	let dispose;
 
     	const block = {
     		c: function create() {
     			video = element("video");
     			source = element("source");
     			t = text("\n              Video is not supported in your browser.");
-    			if (!src_url_equal(source.src, source_src_value = "" + (baseSrc + "/" + /*projectType*/ ctx[1] + "/" + /*videoSrc*/ ctx[6]))) attr_dev(source, "src", source_src_value);
-    			add_location(source, file$2, 36, 14, 931);
+    			if (!src_url_equal(source.src, source_src_value = "" + (baseSrc + "/" + /*projectType*/ ctx[1] + "/" + /*videoSrc*/ ctx[10] + ".mp4"))) attr_dev(source, "src", source_src_value);
+    			add_location(source, file$2, 39, 14, 948);
     			video.muted = true;
     			video.autoplay = true;
     			video.playsInline = true;
     			video.loop = true;
-    			attr_dev(video, "poster", video_poster_value = "" + (baseSrc + "/" + /*projectType*/ ctx[1] + "/" + /*posterSrc*/ ctx[7]));
-    			attr_dev(video, "class", "svelte-azzwtc");
-    			add_location(video, file$2, 29, 12, 749);
+    			attr_dev(video, "poster", video_poster_value = "" + (baseSrc + "/" + /*projectType*/ ctx[1] + "/" + /*posterSrc*/ ctx[11]));
+    			attr_dev(video, "id", video_id_value = /*videoSrc*/ ctx[10]);
+    			attr_dev(video, "class", "svelte-syhie9");
+    			add_location(video, file$2, 30, 12, 710);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, video, anchor);
     			append_dev(video, source);
     			append_dev(video, t);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(video, "play", /*video_play_pause_handler*/ ctx[4]),
+    					listen_dev(video, "pause", /*video_play_pause_handler*/ ctx[4])
+    				];
+
+    				mounted = true;
+    			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*projectType, projects*/ 3 && !src_url_equal(source.src, source_src_value = "" + (baseSrc + "/" + /*projectType*/ ctx[1] + "/" + /*videoSrc*/ ctx[6]))) {
+    			if (dirty & /*projectType, projects*/ 3 && !src_url_equal(source.src, source_src_value = "" + (baseSrc + "/" + /*projectType*/ ctx[1] + "/" + /*videoSrc*/ ctx[10] + ".mp4"))) {
     				attr_dev(source, "src", source_src_value);
     			}
 
-    			if (dirty & /*projectType, projects*/ 3 && video_poster_value !== (video_poster_value = "" + (baseSrc + "/" + /*projectType*/ ctx[1] + "/" + /*posterSrc*/ ctx[7]))) {
+    			if (dirty & /*projectType, projects*/ 3 && video_poster_value !== (video_poster_value = "" + (baseSrc + "/" + /*projectType*/ ctx[1] + "/" + /*posterSrc*/ ctx[11]))) {
     				attr_dev(video, "poster", video_poster_value);
+    			}
+
+    			if (dirty & /*projects*/ 1 && video_id_value !== (video_id_value = /*videoSrc*/ ctx[10])) {
+    				attr_dev(video, "id", video_id_value);
+    			}
+
+    			if (dirty & /*paused*/ 4 && video_is_paused !== (video_is_paused = /*paused*/ ctx[2])) {
+    				video[video_is_paused ? "pause" : "play"]();
     			}
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(video);
+    			mounted = false;
+    			run_all(dispose);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1.name,
+    		id: create_if_block_2.name,
     		type: "if",
-    		source: "(29:29) ",
+    		source: "(30:29) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (23:10) {#if imgSrc}
-    function create_if_block(ctx) {
+    // (24:10) {#if imgSrc}
+    function create_if_block_1(ctx) {
     	let img;
     	let img_src_value;
     	let img_alt_value;
@@ -1223,21 +1271,21 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			img = element("img");
-    			if (!src_url_equal(img.src, img_src_value = "" + (baseSrc + "/" + /*projectType*/ ctx[1] + "/" + /*imgSrc*/ ctx[5]))) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = "" + (baseSrc + "/" + /*projectType*/ ctx[1] + "/" + /*imgSrc*/ ctx[9]))) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "aria-hidden", "true");
-    			attr_dev(img, "alt", img_alt_value = /*headline*/ ctx[2]);
-    			attr_dev(img, "class", "svelte-azzwtc");
-    			add_location(img, file$2, 23, 12, 570);
+    			attr_dev(img, "alt", img_alt_value = /*headline*/ ctx[5]);
+    			attr_dev(img, "class", "svelte-syhie9");
+    			add_location(img, file$2, 24, 12, 531);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*projectType, projects*/ 3 && !src_url_equal(img.src, img_src_value = "" + (baseSrc + "/" + /*projectType*/ ctx[1] + "/" + /*imgSrc*/ ctx[5]))) {
+    			if (dirty & /*projectType, projects*/ 3 && !src_url_equal(img.src, img_src_value = "" + (baseSrc + "/" + /*projectType*/ ctx[1] + "/" + /*imgSrc*/ ctx[9]))) {
     				attr_dev(img, "src", img_src_value);
     			}
 
-    			if (dirty & /*projects*/ 1 && img_alt_value !== (img_alt_value = /*headline*/ ctx[2])) {
+    			if (dirty & /*projects*/ 1 && img_alt_value !== (img_alt_value = /*headline*/ ctx[5])) {
     				attr_dev(img, "alt", img_alt_value);
     			}
     		},
@@ -1248,99 +1296,229 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block.name,
+    		id: create_if_block_1.name,
     		type: "if",
-    		source: "(23:10) {#if imgSrc}",
+    		source: "(24:10) {#if imgSrc}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (20:4) {#each projects as { headline, dek, link, imgSrc, videoSrc, posterSrc, headline, link }
-    function create_each_block$1(ctx) {
+    // (47:12) {#if awards}
+    function create_if_block$1(ctx) {
     	let div;
-    	let a;
-    	let t0;
-    	let h3;
-    	let t1_value = /*headline*/ ctx[2] + "";
-    	let t1;
-    	let t2;
-    	let p;
-    	let t3_value = /*dek*/ ctx[3] + "";
-    	let t3;
-    	let a_href_value;
-    	let t4;
+    	let each_value_1 = /*awards*/ ctx[8];
+    	validate_each_argument(each_value_1);
+    	let each_blocks = [];
 
-    	function select_block_type(ctx, dirty) {
-    		if (/*imgSrc*/ ctx[5]) return create_if_block;
-    		if (/*videoSrc*/ ctx[6]) return create_if_block_1;
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
     	}
-
-    	let current_block_type = select_block_type(ctx);
-    	let if_block = current_block_type && current_block_type(ctx);
 
     	const block = {
     		c: function create() {
     			div = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			attr_dev(div, "class", "awards mt-1 svelte-syhie9");
+    			add_location(div, file$2, 47, 14, 1219);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div, null);
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*projects*/ 1) {
+    				each_value_1 = /*awards*/ ctx[8];
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block_1(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(div, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value_1.length;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$1.name,
+    		type: "if",
+    		source: "(47:12) {#if awards}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (49:16) {#each awards as award}
+    function create_each_block_1(ctx) {
+    	let p;
+    	let raw_value = /*award*/ ctx[14] + "";
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			attr_dev(p, "class", "svelte-syhie9");
+    			add_location(p, file$2, 49, 18, 1303);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			p.innerHTML = raw_value;
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*projects*/ 1 && raw_value !== (raw_value = /*award*/ ctx[14] + "")) p.innerHTML = raw_value;		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_1.name,
+    		type: "each",
+    		source: "(49:16) {#each awards as award}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (21:4) {#each projects as { headline, dek, link, awards, imgSrc, videoSrc, posterSrc, headline, link }
+    function create_each_block$1(ctx) {
+    	let div1;
+    	let a;
+    	let t0;
+    	let div0;
+    	let h3;
+    	let t1_value = /*headline*/ ctx[5] + "";
+    	let t1;
+    	let t2;
+    	let p;
+    	let t3_value = /*dek*/ ctx[6] + "";
+    	let t3;
+    	let t4;
+    	let a_href_value;
+    	let t5;
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*imgSrc*/ ctx[9]) return create_if_block_1;
+    		if (/*videoSrc*/ ctx[10]) return create_if_block_2;
+    	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block0 = current_block_type && current_block_type(ctx);
+    	let if_block1 = /*awards*/ ctx[8] && create_if_block$1(ctx);
+
+    	const block = {
+    		c: function create() {
+    			div1 = element("div");
     			a = element("a");
-    			if (if_block) if_block.c();
+    			if (if_block0) if_block0.c();
     			t0 = space();
+    			div0 = element("div");
     			h3 = element("h3");
     			t1 = text(t1_value);
     			t2 = space();
     			p = element("p");
     			t3 = text(t3_value);
     			t4 = space();
-    			attr_dev(h3, "class", "svelte-azzwtc");
-    			add_location(h3, file$2, 40, 10, 1084);
-    			attr_dev(p, "class", "svelte-azzwtc");
-    			add_location(p, file$2, 41, 10, 1114);
+    			if (if_block1) if_block1.c();
+    			t5 = space();
+    			attr_dev(h3, "class", "svelte-syhie9");
+    			add_location(h3, file$2, 44, 12, 1135);
+    			attr_dev(p, "class", "svelte-syhie9");
+    			add_location(p, file$2, 45, 12, 1167);
+    			attr_dev(div0, "class", "dek");
+    			add_location(div0, file$2, 43, 10, 1105);
     			attr_dev(a, "target", "_blank");
-    			attr_dev(a, "href", a_href_value = /*link*/ ctx[4]);
-    			attr_dev(a, "class", "svelte-azzwtc");
-    			add_location(a, file$2, 21, 8, 501);
-    			attr_dev(div, "class", "project col-4 svelte-azzwtc");
-    			add_location(div, file$2, 20, 6, 465);
+    			attr_dev(a, "href", a_href_value = /*link*/ ctx[7]);
+    			attr_dev(a, "class", "svelte-syhie9");
+    			add_location(a, file$2, 22, 8, 462);
+    			attr_dev(div1, "class", "project col-4 svelte-syhie9");
+    			add_location(div1, file$2, 21, 6, 426);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, a);
-    			if (if_block) if_block.m(a, null);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, a);
+    			if (if_block0) if_block0.m(a, null);
     			append_dev(a, t0);
-    			append_dev(a, h3);
+    			append_dev(a, div0);
+    			append_dev(div0, h3);
     			append_dev(h3, t1);
-    			append_dev(a, t2);
-    			append_dev(a, p);
+    			append_dev(div0, t2);
+    			append_dev(div0, p);
     			append_dev(p, t3);
-    			append_dev(div, t4);
+    			append_dev(div0, t4);
+    			if (if_block1) if_block1.m(div0, null);
+    			append_dev(div1, t5);
     		},
     		p: function update(ctx, dirty) {
-    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
-    				if_block.p(ctx, dirty);
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block0) {
+    				if_block0.p(ctx, dirty);
     			} else {
-    				if (if_block) if_block.d(1);
-    				if_block = current_block_type && current_block_type(ctx);
+    				if (if_block0) if_block0.d(1);
+    				if_block0 = current_block_type && current_block_type(ctx);
 
-    				if (if_block) {
-    					if_block.c();
-    					if_block.m(a, t0);
+    				if (if_block0) {
+    					if_block0.c();
+    					if_block0.m(a, t0);
     				}
     			}
 
-    			if (dirty & /*projects*/ 1 && t1_value !== (t1_value = /*headline*/ ctx[2] + "")) set_data_dev(t1, t1_value);
-    			if (dirty & /*projects*/ 1 && t3_value !== (t3_value = /*dek*/ ctx[3] + "")) set_data_dev(t3, t3_value);
+    			if (dirty & /*projects*/ 1 && t1_value !== (t1_value = /*headline*/ ctx[5] + "")) set_data_dev(t1, t1_value);
+    			if (dirty & /*projects*/ 1 && t3_value !== (t3_value = /*dek*/ ctx[6] + "")) set_data_dev(t3, t3_value);
 
-    			if (dirty & /*projects*/ 1 && a_href_value !== (a_href_value = /*link*/ ctx[4])) {
+    			if (/*awards*/ ctx[8]) {
+    				if (if_block1) {
+    					if_block1.p(ctx, dirty);
+    				} else {
+    					if_block1 = create_if_block$1(ctx);
+    					if_block1.c();
+    					if_block1.m(div0, null);
+    				}
+    			} else if (if_block1) {
+    				if_block1.d(1);
+    				if_block1 = null;
+    			}
+
+    			if (dirty & /*projects*/ 1 && a_href_value !== (a_href_value = /*link*/ ctx[7])) {
     				attr_dev(a, "href", a_href_value);
     			}
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div1);
 
-    			if (if_block) {
-    				if_block.d();
+    			if (if_block0) {
+    				if_block0.d();
     			}
+
+    			if (if_block1) if_block1.d();
     		}
     	};
 
@@ -1348,7 +1526,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(20:4) {#each projects as { headline, dek, link, imgSrc, videoSrc, posterSrc, headline, link }",
+    		source: "(21:4) {#each projects as { headline, dek, link, awards, imgSrc, videoSrc, posterSrc, headline, link }",
     		ctx
     	});
 
@@ -1376,9 +1554,9 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "row");
-    			add_location(div0, file$2, 18, 2, 345);
+    			add_location(div0, file$2, 19, 2, 298);
     			attr_dev(div1, "class", "container");
-    			add_location(div1, file$2, 17, 0, 319);
+    			add_location(div1, file$2, 18, 0, 272);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1392,7 +1570,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*projects, baseSrc, projectType*/ 3) {
+    			if (dirty & /*projects, baseSrc, projectType, paused*/ 7) {
     				each_value = /*projects*/ ctx[0];
     				validate_each_argument(each_value);
     				let i;
@@ -1442,35 +1620,65 @@ var app = (function () {
     	validate_slots('Grid', slots, []);
     	let { projects } = $$props;
     	let { projectType } = $$props;
-    	const writable_props = ['projects', 'projectType'];
+    	let { clicked = false } = $$props;
+    	let paused;
+    	const writable_props = ['projects', 'projectType', 'clicked'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Grid> was created with unknown prop '${key}'`);
     	});
 
+    	function video_play_pause_handler() {
+    		paused = this.paused;
+    		($$invalidate(2, paused), $$invalidate(3, clicked));
+    	}
+
     	$$self.$$set = $$props => {
     		if ('projects' in $$props) $$invalidate(0, projects = $$props.projects);
     		if ('projectType' in $$props) $$invalidate(1, projectType = $$props.projectType);
+    		if ('clicked' in $$props) $$invalidate(3, clicked = $$props.clicked);
     	};
 
-    	$$self.$capture_state = () => ({ projects, projectType, baseSrc });
+    	$$self.$capture_state = () => ({
+    		projects,
+    		projectType,
+    		clicked,
+    		paused,
+    		baseSrc
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('projects' in $$props) $$invalidate(0, projects = $$props.projects);
     		if ('projectType' in $$props) $$invalidate(1, projectType = $$props.projectType);
+    		if ('clicked' in $$props) $$invalidate(3, clicked = $$props.clicked);
+    		if ('paused' in $$props) $$invalidate(2, paused = $$props.paused);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [projects, projectType];
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*clicked, paused*/ 12) {
+    			{
+    				if (clicked) {
+    					$$invalidate(2, paused = true);
+    				}
+
+    				if (!clicked & paused) {
+    					$$invalidate(2, paused = false);
+    				}
+    			}
+    		}
+    	};
+
+    	return [projects, projectType, paused, clicked, video_play_pause_handler];
     }
 
     class Grid extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$3, create_fragment$3, safe_not_equal, { projects: 0, projectType: 1 });
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, { projects: 0, projectType: 1, clicked: 3 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -1506,103 +1714,125 @@ var app = (function () {
     	set projectType(value) {
     		throw new Error("<Grid>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get clicked() {
+    		throw new Error("<Grid>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set clicked(value) {
+    		throw new Error("<Grid>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     var projects = [
-    	[
-    		{
-    			type: "graphics",
-    			projects: [
-    				{
-    					headline: "Gender and language",
-    					dek: "The movement to recognize a spectrum of genders is changing languages around the world.",
-    					videoSrc: "gender-cropped3.mp4",
-    					posterSrc: "gender-poster.png",
-    					link: "https://graphics.reuters.com/GENDER-LANGUAGE/LGBT/mopanqoelva/index.html"
-    				},
-    				{
-    					headline: "Vaccine bootcamp",
-    					dek: "DEK 2",
-    					imgSrc: "vax-bootcamp.png",
-    					link: "https://graphics.reuters.com/HEALTH-CORONAVIRUS/VACCINE/yzdpxqxnwvx/index.html"
-    				},
-    				{
-    					headline: "Clippings from the longest year",
-    					dek: "DEK 3",
-    					imgSrc: "clippings.png",
-    					link: "https://graphics.reuters.com/HEALTH-CORONAVIRUS/SCRAPBOOK/gjnpwklkopw/index.html"
-    				},
-    				{
-    					headline: "Hot and humid Olympic summer",
-    					dek: "DEK 3",
-    					imgSrc: "olympics.png",
-    					link: "https://graphics.reuters.com/OLYMPICS-2020/SUMMER-HEAT/bdwvkogrzvm/index.html"
-    				},
-    				{
-    					headline: "Myanmar’s internet suppression",
-    					dek: "DEK 3",
-    					imgSrc: "myanmar.png",
-    					link: "https://graphics.reuters.com/MYANMAR-POLITICS/INTERNET-RESTRICTION/rlgpdbreepo/index.html"
-    				},
-    				{
-    					headline: "Speed and trust",
-    					dek: "DEK 3",
-    					imgSrc: "speed-trust.png",
-    					link: "https://graphics.reuters.com/HEALTH-CORONAVIRUS/VACCINE-ROLLOUT/rlgvdegqqpo/index.html"
-    				}
-    			]
-    		}
-    	],
-    	[
-    		{
-    			type: "investigative",
-    			projects: [
-    				{
-    					headline: "INVESTIGATIVE 1",
-    					dek: "DEK 1",
-    					imgSrc: "",
-    					link: "link 1"
-    				},
-    				{
-    					headline: "INVESTIGATIVE 2",
-    					dek: "DEK 2",
-    					imgSrc: "",
-    					link: "link 2"
-    				},
-    				{
-    					headline: "INVESTIGATIVE 3",
-    					dek: "DEK 3",
-    					imgSrc: "",
-    					link: "link 3"
-    				}
-    			]
-    		}
-    	],
-    	[
-    		{
-    			type: "video",
-    			projects: [
-    				{
-    					headline: "VIDEO 1",
-    					dek: "DEK 1",
-    					imgSrc: "",
-    					link: "link 1"
-    				},
-    				{
-    					headline: "VIDEO 2",
-    					dek: "DEK 2",
-    					imgSrc: "",
-    					link: "link 2"
-    				},
-    				{
-    					headline: "VIDEO 3",
-    					dek: "DEK 3",
-    					imgSrc: "",
-    					link: "link 3"
-    				}
-    			]
-    		}
-    	]
+    	{
+    		type: "graphics",
+    		data: [
+    			{
+    				headline: "Gender and language",
+    				dek: "The movement to recognize a spectrum of genders is changing languages around the world",
+    				videoSrc: "gender-cropped",
+    				posterSrc: "gender-poster.png",
+    				link: "https://graphics.reuters.com/GENDER-LANGUAGE/LGBT/mopanqoelva/index.html"
+    			},
+    			{
+    				headline: "Vaccine bootcamp",
+    				dek: "The different types of vaccines and how your body uses them to develop immunity",
+    				imgSrc: "vax-bootcamp.png",
+    				link: "https://graphics.reuters.com/HEALTH-CORONAVIRUS/VACCINE/yzdpxqxnwvx/index.html",
+    				awards: [
+    					"<strong>Bronze medal</strong> | Malofiej29",
+    					"<strong>Silver medal</strong> | SND"
+    				]
+    			},
+    			{
+    				headline: "Clippings from the longest year",
+    				dek: "Looking back on 2020",
+    				imgSrc: "clippings.png",
+    				link: "https://graphics.reuters.com/HEALTH-CORONAVIRUS/SCRAPBOOK/gjnpwklkopw/index.html",
+    				awards: [
+    					"<strong>Bronze medal</strong> | Malofiej29",
+    					"<strong>Silver medal</strong> | SND"
+    				]
+    			},
+    			{
+    				headline: "Hot and humid Olympic summer",
+    				dek: "Tokyo’s sweltering summer heightens the risk of heat illness at the 2020 Olympics",
+    				imgSrc: "olympics.png",
+    				link: "https://graphics.reuters.com/OLYMPICS-2020/SUMMER-HEAT/bdwvkogrzvm/index.html"
+    			},
+    			{
+    				headline: "Myanmar’s internet suppression",
+    				dek: "Crackdowns on protesters in the street are mirrored by its rising restrictions online",
+    				imgSrc: "myanmar.png",
+    				link: "https://graphics.reuters.com/MYANMAR-POLITICS/INTERNET-RESTRICTION/rlgpdbreepo/index.html"
+    			},
+    			{
+    				headline: "Speed and trust",
+    				dek: "The keys to an effective COVID-19 vaccination programme",
+    				imgSrc: "speed-trust.png",
+    				link: "https://graphics.reuters.com/HEALTH-CORONAVIRUS/VACCINE-ROLLOUT/rlgvdegqqpo/index.html"
+    			}
+    		]
+    	},
+    	{
+    		type: "investigative",
+    		data: [
+    			{
+    				headline: "Death in Detention",
+    				dek: "Grim toll mounts in Japanese detention centers as foreigners seek asylum",
+    				imgSrc: "death-detention.png",
+    				link: "https://www.reuters.com/investigates/special-report/japan-detention/",
+    				awards: [
+    					"<strong>Honourable mention</strong> | SOPA"
+    				]
+    			},
+    			{
+    				headline: "Rough Refuge",
+    				dek: "Banned from working, asylum seekers are building Japan's roads and sewers",
+    				imgSrc: "rough-refuge.png",
+    				link: "https://www.reuters.com/investigates/special-report/japan-kurds/",
+    				awards: [
+    					"<strong>Honourable mention</strong> | SOPA"
+    				]
+    			},
+    			{
+    				headline: "Born in Limbo",
+    				dek: "Japan forces a harsh choice on children of migrant families",
+    				imgSrc: "born-in-limbo.png",
+    				link: "https://www.reuters.com/investigates/special-report/japan-detention-children/",
+    				awards: [
+    					"<strong>Honourable mention</strong> | SOPA"
+    				]
+    			}
+    		]
+    	},
+    	{
+    		type: "video",
+    		data: [
+    			{
+    				headline: "Japan's “Blade Library”",
+    				dek: "A young Japanese amputee who dreams of becoming a Paralympian, remembers strapping on a prosthetic “running blade” for the first time.",
+    				videoSrc: "blade-runner",
+    				posterSrc: "",
+    				link: "https://www.reuters.com/article/us-japan-prosthetics-runners/japans-blade-library-offers-joy-of-blade-running-to-amputees-idUSKBN1CM0SI"
+    			},
+    			{
+    				headline: "Dolling up",
+    				dek: "Meet Lulu Hashimoto, a “living doll” and the latest trend in Tokyo’s fashion modeling scene",
+    				videoSrc: "lulu",
+    				posterSrc: "",
+    				link: "https://www.reuters.com/article/us-japan-dollmodel/meet-lulu-hashimoto-the-living-doll-fashion-model-idUSKCN1B40QH"
+    			},
+    			{
+    				headline: "Circle of life",
+    				dek: "Japan's homeless banish despair through dance",
+    				videoSrc: "dance",
+    				posterSrc: "",
+    				link: "https://www.reuters.com/article/us-japan-homeless-dancers/circle-of-life-japans-homeless-banish-despair-through-dance-idUSKCN1BM1EM"
+    			}
+    		]
+    	}
     ];
 
     /* src/Projects/index.svelte generated by Svelte v3.46.4 */
@@ -1610,25 +1840,72 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[0] = list[i];
+    	child_ctx[3] = list[i];
     	return child_ctx;
     }
 
-    // (9:2) {#each projects as projectType}
+    // (26:6) {#if project.type == 'video'}
+    function create_if_block(ctx) {
+    	let button;
+    	let t;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			button = element("button");
+    			t = text(/*buttonLabel*/ ctx[1]);
+    			attr_dev(button, "class", "svelte-eowph3");
+    			add_location(button, file$1, 26, 8, 549);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, button, anchor);
+    			append_dev(button, t);
+
+    			if (!mounted) {
+    				dispose = listen_dev(button, "click", /*pauseVideo*/ ctx[2], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*buttonLabel*/ 2) set_data_dev(t, /*buttonLabel*/ ctx[1]);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(button);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(26:6) {#if project.type == 'video'}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (23:2) {#each projects as project}
     function create_each_block(ctx) {
     	let div;
     	let h3;
-    	let t0_value = /*projectType*/ ctx[0][0].type + "";
+    	let t0_value = /*project*/ ctx[3].type + "";
     	let t0;
     	let t1;
-    	let grid;
     	let t2;
+    	let grid;
+    	let t3;
     	let current;
+    	let if_block = /*project*/ ctx[3].type == 'video' && create_if_block(ctx);
 
     	grid = new Grid({
     			props: {
-    				projects: /*projectType*/ ctx[0][0].projects,
-    				projectType: /*projectType*/ ctx[0][0].type
+    				projects: /*project*/ ctx[3].data,
+    				projectType: /*project*/ ctx[3].type,
+    				clicked: /*clicked*/ ctx[0]
     			},
     			$$inline: true
     		});
@@ -1639,23 +1916,32 @@ var app = (function () {
     			h3 = element("h3");
     			t0 = text(t0_value);
     			t1 = space();
-    			create_component(grid.$$.fragment);
+    			if (if_block) if_block.c();
     			t2 = space();
-    			attr_dev(h3, "class", "svelte-lql2o2");
-    			add_location(h3, file$1, 10, 6, 243);
-    			attr_dev(div, "class", "" + (null_to_empty(/*projectType*/ ctx[0][0].type) + " svelte-lql2o2"));
-    			add_location(div, file$1, 9, 4, 201);
+    			create_component(grid.$$.fragment);
+    			t3 = space();
+    			attr_dev(h3, "class", "svelte-eowph3");
+    			add_location(h3, file$1, 24, 6, 481);
+    			attr_dev(div, "class", "" + (null_to_empty(/*project*/ ctx[3].type) + " svelte-eowph3"));
+    			add_location(div, file$1, 23, 4, 446);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			append_dev(div, h3);
     			append_dev(h3, t0);
     			append_dev(div, t1);
-    			mount_component(grid, div, null);
+    			if (if_block) if_block.m(div, null);
     			append_dev(div, t2);
+    			mount_component(grid, div, null);
+    			append_dev(div, t3);
     			current = true;
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (/*project*/ ctx[3].type == 'video') if_block.p(ctx, dirty);
+    			const grid_changes = {};
+    			if (dirty & /*clicked*/ 1) grid_changes.clicked = /*clicked*/ ctx[0];
+    			grid.$set(grid_changes);
+    		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(grid.$$.fragment, local);
@@ -1667,6 +1953,7 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
+    			if (if_block) if_block.d();
     			destroy_component(grid);
     		}
     	};
@@ -1675,7 +1962,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(9:2) {#each projects as projectType}",
+    		source: "(23:2) {#each projects as project}",
     		ctx
     	});
 
@@ -1705,7 +1992,7 @@ var app = (function () {
     		c: function create() {
     			section = element("section");
     			h2 = element("h2");
-    			h2.textContent = "Selected projects";
+    			h2.textContent = "Selected works";
     			t1 = space();
     			hr = element("hr");
     			t2 = space();
@@ -1714,10 +2001,12 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(h2, file$1, 6, 2, 127);
-    			add_location(hr, file$1, 7, 2, 156);
-    			attr_dev(section, "class", "projects svelte-lql2o2");
-    			add_location(section, file$1, 5, 0, 98);
+    			attr_dev(h2, "class", "svelte-eowph3");
+    			add_location(h2, file$1, 20, 2, 379);
+    			attr_dev(hr, "class", "svelte-eowph3");
+    			add_location(hr, file$1, 21, 2, 405);
+    			attr_dev(section, "class", "projects svelte-eowph3");
+    			add_location(section, file$1, 19, 0, 350);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1736,7 +2025,7 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*projects*/ 0) {
+    			if (dirty & /*projects, clicked, pauseVideo, buttonLabel*/ 7) {
     				each_value = projects;
     				validate_each_argument(each_value);
     				let i;
@@ -1802,14 +2091,43 @@ var app = (function () {
     function instance$2($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Projects', slots, []);
+    	let clicked = false;
+    	let buttonLabel = 'Pause';
+
+    	const pauseVideo = () => {
+    		if (!clicked) {
+    			$$invalidate(0, clicked = true);
+    			$$invalidate(1, buttonLabel = 'Play');
+    		} else {
+    			$$invalidate(0, clicked = false);
+    			$$invalidate(1, buttonLabel = 'Pause');
+    		}
+    	};
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Projects> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ Grid, projects });
-    	return [];
+    	$$self.$capture_state = () => ({
+    		Grid,
+    		projects,
+    		clicked,
+    		buttonLabel,
+    		pauseVideo
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('clicked' in $$props) $$invalidate(0, clicked = $$props.clicked);
+    		if ('buttonLabel' in $$props) $$invalidate(1, buttonLabel = $$props.buttonLabel);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [clicked, buttonLabel, pauseVideo];
     }
 
     class Projects extends SvelteComponentDev {
@@ -1839,9 +2157,9 @@ var app = (function () {
     			section = element("section");
     			p = element("p");
     			p.textContent = "Updated Feb. 2022";
-    			attr_dev(p, "class", "svelte-k70e6m");
+    			attr_dev(p, "class", "svelte-1jjdd5e");
     			add_location(p, file, 1, 2, 27);
-    			attr_dev(section, "class", "footer svelte-k70e6m");
+    			attr_dev(section, "class", "footer svelte-1jjdd5e");
     			add_location(section, file, 0, 0, 0);
     		},
     		l: function claim(nodes) {
