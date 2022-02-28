@@ -1,96 +1,110 @@
 [
-    [
-        {
-            "type": "graphics",
-            "projects": [
-                {
-                    "headline": "Gender and language",
-                    "dek": "The movement to recognize a spectrum of genders is changing languages around the world.",
-                    "videoSrc": "gender-cropped3.mp4",
-                    "posterSrc": "gender-poster.png",
-                    "link": "https://graphics.reuters.com/GENDER-LANGUAGE/LGBT/mopanqoelva/index.html"
-                },
-                {
-                    "headline": "Vaccine bootcamp",
-                    "dek": "DEK 2",
-                    "imgSrc": "vax-bootcamp.png",
-                    "link": "https://graphics.reuters.com/HEALTH-CORONAVIRUS/VACCINE/yzdpxqxnwvx/index.html"
-                },
-                {
-                    "headline": "Clippings from the longest year",
-                    "dek": "DEK 3",
-                    "imgSrc": "clippings.png",
-                    "link": "https://graphics.reuters.com/HEALTH-CORONAVIRUS/SCRAPBOOK/gjnpwklkopw/index.html"
-                },
-                {
-                    "headline": "Hot and humid Olympic summer",
-                    "dek": "DEK 3",
-                    "imgSrc": "olympics.png",
-                    "link": "https://graphics.reuters.com/OLYMPICS-2020/SUMMER-HEAT/bdwvkogrzvm/index.html"
-                },
-                {
-                    "headline": "Myanmar’s internet suppression",
-                    "dek": "DEK 3",
-                    "imgSrc": "myanmar.png",
-                    "link": "https://graphics.reuters.com/MYANMAR-POLITICS/INTERNET-RESTRICTION/rlgpdbreepo/index.html"
-                },
-                {
-                    "headline": "Speed and trust",
-                    "dek": "DEK 3",
-                    "imgSrc": "speed-trust.png",
-                    "link": "https://graphics.reuters.com/HEALTH-CORONAVIRUS/VACCINE-ROLLOUT/rlgvdegqqpo/index.html"
-                }
-            ]
-        }
-    ],
-    [
-        {
-            "type": "investigative",
-            "projects": [
-                {
-                    "headline": "INVESTIGATIVE 1",
-                    "dek": "DEK 1",
-                    "imgSrc": "",
-                    "link": "link 1"
-                },
-                {
-                    "headline": "INVESTIGATIVE 2",
-                    "dek": "DEK 2",
-                    "imgSrc": "",
-                    "link": "link 2"
-                },
-                {
-                    "headline": "INVESTIGATIVE 3",
-                    "dek": "DEK 3",
-                    "imgSrc": "",
-                    "link": "link 3"
-                }
-            ]
-        }
-    ],
-    [
-        {
-            "type": "video",
-            "projects": [
-                {
-                    "headline": "VIDEO 1",
-                    "dek": "DEK 1",
-                    "imgSrc": "",
-                    "link": "link 1"
-                },
-                {
-                    "headline": "VIDEO 2",
-                    "dek": "DEK 2",
-                    "imgSrc": "",
-                    "link": "link 2"
-                },
-                {
-                    "headline": "VIDEO 3",
-                    "dek": "DEK 3",
-                    "imgSrc": "",
-                    "link": "link 3"
-                }
-            ]
-        }
-    ]
+    {
+        "type": "graphics",
+        "data": [
+            {
+                "headline": "Gender and language",
+                "dek": "The movement to recognize a spectrum of genders is changing languages around the world",
+                "videoSrc": "gender-cropped",
+                "posterSrc": "gender-poster.png",
+                "link": "https://graphics.reuters.com/GENDER-LANGUAGE/LGBT/mopanqoelva/index.html"
+            },
+            {
+                "headline": "Vaccine bootcamp",
+                "dek": "The different types of vaccines and how your body uses them to develop immunity",
+                "imgSrc": "vax-bootcamp.png",
+                "link": "https://graphics.reuters.com/HEALTH-CORONAVIRUS/VACCINE/yzdpxqxnwvx/index.html",
+                "awards": [
+                    "<strong>Bronze medal</strong> | Malofiej29",
+                    "<strong>Silver medal</strong> | SND"
+                ]
+            },
+            {
+                "headline": "Clippings from the longest year",
+                "dek": "Looking back on 2020",
+                "imgSrc": "clippings.png",
+                "link": "https://graphics.reuters.com/HEALTH-CORONAVIRUS/SCRAPBOOK/gjnpwklkopw/index.html",
+                "awards": [
+                    "<strong>Bronze medal</strong> | Malofiej29",
+                    "<strong>Silver medal</strong> | SND"
+                ]
+            },
+            {
+                "headline": "Hot and humid Olympic summer",
+                "dek": "Tokyo’s sweltering summer heightens the risk of heat illness at the 2020 Olympics",
+                "imgSrc": "olympics.png",
+                "link": "https://graphics.reuters.com/OLYMPICS-2020/SUMMER-HEAT/bdwvkogrzvm/index.html"
+            },
+            {
+                "headline": "Myanmar’s internet suppression",
+                "dek": "Crackdowns on protesters in the street are mirrored by its rising restrictions online",
+                "imgSrc": "myanmar.png",
+                "link": "https://graphics.reuters.com/MYANMAR-POLITICS/INTERNET-RESTRICTION/rlgpdbreepo/index.html"
+            },
+            {
+                "headline": "Speed and trust",
+                "dek": "The keys to an effective COVID-19 vaccination programme",
+                "imgSrc": "speed-trust.png",
+                "link": "https://graphics.reuters.com/HEALTH-CORONAVIRUS/VACCINE-ROLLOUT/rlgvdegqqpo/index.html"
+            }
+        ]
+    },
+    {
+        "type": "investigative",
+        "data": [
+            {
+                "headline": "Death in Detention",
+                "dek": "Grim toll mounts in Japanese detention centers as foreigners seek asylum",
+                "imgSrc": "death-detention.png",
+                "link": "https://www.reuters.com/investigates/special-report/japan-detention/",
+                "awards": [
+                    "<strong>Honourable mention</strong> | SOPA"
+                ]
+            },
+            {
+                "headline": "Rough Refuge",
+                "dek": "Banned from working, asylum seekers are building Japan's roads and sewers",
+                "imgSrc": "rough-refuge.png",
+                "link": "https://www.reuters.com/investigates/special-report/japan-kurds/",
+                "awards": [
+                    "<strong>Honourable mention</strong> | SOPA"
+                ]
+            },
+            {
+                "headline": "Born in Limbo",
+                "dek": "Japan forces a harsh choice on children of migrant families",
+                "imgSrc": "born-in-limbo.png",
+                "link": "https://www.reuters.com/investigates/special-report/japan-detention-children/",
+                "awards": [
+                    "<strong>Honourable mention</strong> | SOPA"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "video",
+        "data": [
+            {
+                "headline": "Japan's “Blade Library”",
+                "dek": "A young Japanese amputee who dreams of becoming a Paralympian, remembers strapping on a prosthetic “running blade” for the first time.",
+                "videoSrc": "blade-runner",
+                "posterSrc": "",
+                "link": "https://www.reuters.com/article/us-japan-prosthetics-runners/japans-blade-library-offers-joy-of-blade-running-to-amputees-idUSKBN1CM0SI"
+            },
+            {
+                "headline": "Dolling up",
+                "dek": "Meet Lulu Hashimoto, a “living doll” and the latest trend in Tokyo’s fashion modeling scene",
+                "videoSrc": "lulu",
+                "posterSrc": "",
+                "link": "https://www.reuters.com/article/us-japan-dollmodel/meet-lulu-hashimoto-the-living-doll-fashion-model-idUSKCN1B40QH"
+            },
+            {
+                "headline": "Circle of life",
+                "dek": "Japan's homeless banish despair through dance",
+                "videoSrc": "dance",
+                "posterSrc": "",
+                "link": "https://www.reuters.com/article/us-japan-homeless-dancers/circle-of-life-japans-homeless-banish-despair-through-dance-idUSKCN1BM1EM"
+            }
+        ]
+    }
 ]

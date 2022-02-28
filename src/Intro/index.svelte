@@ -59,10 +59,10 @@
   .short-bio {
     display: flex;
     p {
-      margin-top: 5px;
+      margin-top: -2.5px;
       margin-right: 12.5px;
       font-weight: 300;
-      color: #666666;
+      color: #555;
     }
 
     p:not(:first-child)::before {
@@ -75,7 +75,7 @@
 
   .contact {
     a {
-      color: #999999;
+      color: #c4c4c4;
       margin-right: 7.5px;
     }
     a:first-child {

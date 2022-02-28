@@ -24,6 +24,7 @@
 <style lang="scss">
   .container {
     display: flex;
+    padding-left: 0;
 
     p {
       margin: 5px 0 0 0;
