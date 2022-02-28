@@ -1,4 +1,4 @@
-<section class="awards">
+<section class="education">
   <h2>Education</h2>
   <hr />
   <div>

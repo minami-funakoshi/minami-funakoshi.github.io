@@ -14,7 +14,10 @@
 
     https://gist.github.com/cobyism/4730490 
     https://www.youtube.com/watch?v=CmaUDwVCTy8 
-    */
+
+    See data here:
+    https://docs.google.com/spreadsheets/d/1Xn5xl_ZDAhaKwYunABv0X7Q0GsiiKCmLe9wiA4BGX2k/edit#gid=0
+*/
 </script>
 
 <Intro />
@@ -22,6 +25,3 @@
 <Awards />
 <Education />
 <Footer />
-
-<style lang="scss">
-</style>

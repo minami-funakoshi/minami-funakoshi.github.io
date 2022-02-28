@@ -1,26 +1,20 @@
 <script>
   import Grid from './Grid.svelte';
-  import { graphics } from './projects.js';
+  import projects from './projects.json';
 </script>
 
 <section class="projects">
   <h2>Selected projects</h2>
   <hr />
-  <div class="graphics">
-    <h3>Graphics</h3>
-    <Grid projects="{graphics}" />
-    <p>Some description on awards?</p>
-  </div>
-  <div class="investigative">
-    <h3>Investigative</h3>
-    <Grid projects="{graphics}" />
-    <p>Some description on awards?</p>
-  </div>
-  <div class="video">
-    <h3>Video news</h3>
-    <Grid projects="{graphics}" />
-    <p>Some description on awards?</p>
-  </div>
+  {#each projects as projectType}
+    <div class="{projectType[0].type}">
+      <h3>{projectType[0].type}</h3>
+      <Grid
+        projects="{projectType[0].projects}"
+        projectType="{projectType[0].type}"
+      />
+    </div>
+  {/each}
 </section>
 
 <style lang="scss">

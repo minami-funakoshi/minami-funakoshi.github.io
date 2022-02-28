@@ -1,5 +1,5 @@
 <script>
-  import { awards } from './awards';
+  import awards from './awards.json';
 </script>
 
 <section class="awards">
@@ -34,6 +34,8 @@
     }
     p::after {
       content: '|';
+      font-weight: 500;
+      color: #bbbbbb;
       margin-left: 5px;
       margin-right: 5px;
     }

@@ -1,5 +1,6 @@
 import commonjs from '@rollup/plugin-commonjs';
 import css from 'rollup-plugin-css-only';
+import json from '@rollup/plugin-json';
 import livereload from 'rollup-plugin-livereload';
 import preprocess from 'svelte-preprocess';
 import resolve from '@rollup/plugin-node-resolve';
@@ -47,6 +48,7 @@ export default {
 			preprocess: preprocess()
 
 		}),
+		json(),
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
 		css({ output: 'bundle.css' }),
@@ -66,7 +68,7 @@ export default {
 		// the bundle has been generated
 		!production && serve(),
 
-		// Watch the `public` directory and refresh the
+		// Watch the `dist` directory and refresh the
 		// browser on changes when not in production
 		!production && livereload('public'),
 

@@ -1,0 +1,96 @@
+[
+    [
+        {
+            "type": "graphics",
+            "projects": [
+                {
+                    "headline": "Gender and language",
+                    "dek": "The movement to recognize a spectrum of genders is changing languages around the world.",
+                    "videoSrc": "gender-cropped3.mp4",
+                    "posterSrc": "gender-poster.png",
+                    "link": "https://graphics.reuters.com/GENDER-LANGUAGE/LGBT/mopanqoelva/index.html"
+                },
+                {
+                    "headline": "Vaccine bootcamp",
+                    "dek": "DEK 2",
+                    "imgSrc": "vax-bootcamp.png",
+                    "link": "https://graphics.reuters.com/HEALTH-CORONAVIRUS/VACCINE/yzdpxqxnwvx/index.html"
+                },
+                {
+                    "headline": "Clippings from the longest year",
+                    "dek": "DEK 3",
+                    "imgSrc": "clippings.png",
+                    "link": "https://graphics.reuters.com/HEALTH-CORONAVIRUS/SCRAPBOOK/gjnpwklkopw/index.html"
+                },
+                {
+                    "headline": "Hot and humid Olympic summer",
+                    "dek": "DEK 3",
+                    "imgSrc": "olympics.png",
+                    "link": "https://graphics.reuters.com/OLYMPICS-2020/SUMMER-HEAT/bdwvkogrzvm/index.html"
+                },
+                {
+                    "headline": "Myanmar’s internet suppression",
+                    "dek": "DEK 3",
+                    "imgSrc": "myanmar.png",
+                    "link": "https://graphics.reuters.com/MYANMAR-POLITICS/INTERNET-RESTRICTION/rlgpdbreepo/index.html"
+                },
+                {
+                    "headline": "Speed and trust",
+                    "dek": "DEK 3",
+                    "imgSrc": "speed-trust.png",
+                    "link": "https://graphics.reuters.com/HEALTH-CORONAVIRUS/VACCINE-ROLLOUT/rlgvdegqqpo/index.html"
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "type": "investigative",
+            "projects": [
+                {
+                    "headline": "INVESTIGATIVE 1",
+                    "dek": "DEK 1",
+                    "imgSrc": "",
+                    "link": "link 1"
+                },
+                {
+                    "headline": "INVESTIGATIVE 2",
+                    "dek": "DEK 2",
+                    "imgSrc": "",
+                    "link": "link 2"
+                },
+                {
+                    "headline": "INVESTIGATIVE 3",
+                    "dek": "DEK 3",
+                    "imgSrc": "",
+                    "link": "link 3"
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "type": "video",
+            "projects": [
+                {
+                    "headline": "VIDEO 1",
+                    "dek": "DEK 1",
+                    "imgSrc": "",
+                    "link": "link 1"
+                },
+                {
+                    "headline": "VIDEO 2",
+                    "dek": "DEK 2",
+                    "imgSrc": "",
+                    "link": "link 2"
+                },
+                {
+                    "headline": "VIDEO 3",
+                    "dek": "DEK 3",
+                    "imgSrc": "",
+                    "link": "link 3"
+                }
+            ]
+        }
+    ]
+]

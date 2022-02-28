@@ -66,8 +66,10 @@
     }
 
     p:not(:first-child)::before {
-      margin-right: 12.5px;
       content: '|';
+      font-weight: 400;
+      color: #bbb;
+      margin-right: 12.5px;
     }
   }
 
@@ -83,20 +85,4 @@
       font-size: 1.1rem;
     }
   }
-
-  //   body {
-  //     margin:auto;
-  //     font-family: 'Source Sans Pro', sans-serif;
-  //     font-size: 17px;
-  // }
-
-  // /* FONT */
-
-  // .serif {
-  //     font-family: 'Noto Serif JP', 'Lora', serif;
-  // }
-
-  // .sans-serif {
-  //     font-family: 'Source Sans Pro', sans-serif;
-  // }
 </style>

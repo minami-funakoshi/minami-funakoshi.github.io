@@ -1,6 +1,4 @@
-<script></script>
-
-<section>
+<section class="footer">
   <p>Updated Feb. 2022</p>
 </section>
 
