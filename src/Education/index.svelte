@@ -14,7 +14,7 @@
     <p>Inter-University Program for Chinese Language</p>
   </div>
   <div>
-    <h3>NAtional Taiwan University</h3>
+    <h3>National Taiwan University</h3>
     <p>International Chinese Language Program</p>
   </div>
 </section>

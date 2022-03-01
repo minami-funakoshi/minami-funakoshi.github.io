@@ -19,7 +19,7 @@
 <div class="container">
   <div class="row">
     {#each projects as { headline, dek, link, awards, imgSrc, videoSrc, posterSrc, headline, link }, i}
-      <div class="project col-4">
+      <div class="project col-lg-4 col-md-4 col-sm-12">
         <a target="_blank" href="{link}">
           {#if imgSrc}
             <img
@@ -94,6 +94,12 @@
       padding-left: 5%;
       padding-right: 5%;
       object-position: center -8px;
+
+      @media only screen and (max-width: 530px) {
+        width: 70%;
+        padding-left: 15%;
+        padding-right: 15%;
+      }
     }
   }
 

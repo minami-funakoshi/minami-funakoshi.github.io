@@ -54,6 +54,10 @@
     margin-top: 0;
     margin-bottom: 0;
     margin-left: -5px;
+
+    @media only screen and (max-width: 530px) {
+      font-size: 3rem;
+    }
   }
 
   .short-bio {
