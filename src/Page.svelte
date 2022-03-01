@@ -21,7 +21,7 @@
 </script>
 
 <Intro />
-<Projects />
+<!-- <Projects /> -->
 <Awards />
 <Education />
 <Footer />
