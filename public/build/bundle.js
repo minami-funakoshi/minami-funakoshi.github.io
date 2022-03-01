@@ -1871,11 +1871,11 @@ var app = (function () {
     			i0 = element("i");
     			t = space();
     			i1 = element("i");
-    			attr_dev(i0, "class", "fa fa-solid fa-pause svelte-1rqqv2c");
-    			add_location(i0, file$1, 29, 10, 683);
-    			attr_dev(i1, "class", "fa fa-solid fa-play svelte-1rqqv2c");
-    			add_location(i1, file$1, 30, 10, 730);
-    			attr_dev(button, "class", button_class_value = "" + (null_to_empty(/*buttonLabel*/ ctx[1]) + " svelte-1rqqv2c"));
+    			attr_dev(i0, "class", "fa fa-light fa-pause svelte-609hj4");
+    			add_location(i0, file$1, 28, 10, 658);
+    			attr_dev(i1, "class", "fa fa-solid fa-play svelte-609hj4");
+    			add_location(i1, file$1, 29, 10, 705);
+    			attr_dev(button, "class", button_class_value = "" + (null_to_empty(/*buttonLabel*/ ctx[1]) + " svelte-609hj4"));
     			add_location(button, file$1, 27, 8, 593);
     		},
     		m: function mount(target, anchor) {
@@ -1890,7 +1890,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*buttonLabel*/ 2 && button_class_value !== (button_class_value = "" + (null_to_empty(/*buttonLabel*/ ctx[1]) + " svelte-1rqqv2c"))) {
+    			if (dirty & /*buttonLabel*/ 2 && button_class_value !== (button_class_value = "" + (null_to_empty(/*buttonLabel*/ ctx[1]) + " svelte-609hj4"))) {
     				attr_dev(button, "class", button_class_value);
     			}
     		},
@@ -1944,9 +1944,9 @@ var app = (function () {
     			t2 = space();
     			create_component(grid.$$.fragment);
     			t3 = space();
-    			attr_dev(h3, "class", "svelte-1rqqv2c");
+    			attr_dev(h3, "class", "svelte-609hj4");
     			add_location(h3, file$1, 25, 6, 525);
-    			attr_dev(div, "class", "" + (null_to_empty(/*project*/ ctx[3].type) + " svelte-1rqqv2c"));
+    			attr_dev(div, "class", "" + (null_to_empty(/*project*/ ctx[3].type) + " svelte-609hj4"));
     			add_location(div, file$1, 24, 4, 490);
     		},
     		m: function mount(target, anchor) {
@@ -2025,11 +2025,11 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h2, "class", "svelte-1rqqv2c");
+    			attr_dev(h2, "class", "svelte-609hj4");
     			add_location(h2, file$1, 21, 2, 423);
-    			attr_dev(hr, "class", "svelte-1rqqv2c");
+    			attr_dev(hr, "class", "svelte-609hj4");
     			add_location(hr, file$1, 22, 2, 449);
-    			attr_dev(section, "class", "projects svelte-1rqqv2c");
+    			attr_dev(section, "class", "projects svelte-609hj4");
     			add_location(section, file$1, 20, 0, 394);
     		},
     		l: function claim(nodes) {

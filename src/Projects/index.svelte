@@ -15,7 +15,7 @@
     }
   };
 
-  // Lazy-load videos?
+  // For future - lazy-load videos?
 </script>
 
 <section class="projects">
@@ -26,10 +26,8 @@
       <h3>{project.type}</h3>
       {#if project.type == 'video'}
         <button on:click="{pauseVideo}" class="{buttonLabel}">
-          <!-- <div> -->
-          <i class="fa fa-solid fa-pause"></i>
+          <i class="fa fa-light fa-pause"></i>
           <i class="fa fa-solid fa-play"></i>
-          <!-- </div> -->
         </button>
       {/if}
       <Grid
@@ -69,6 +67,7 @@
     i {
       display: none;
       font-size: 1rem;
+      color: #555;
     }
     &.play {
       i.fa-play {
