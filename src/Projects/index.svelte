@@ -1,16 +1,17 @@
 <script>
+  import { fade } from 'svelte/transition';
   import Grid from './Grid.svelte';
   import projects from './projects.json';
   let clicked = false;
-  let buttonLabel = 'Pause';
+  let buttonLabel = 'pause';
 
   const pauseVideo = () => {
     if (!clicked) {
       clicked = true;
-      buttonLabel = 'Play';
+      buttonLabel = 'play';
     } else {
       clicked = false;
-      buttonLabel = 'Pause';
+      buttonLabel = 'pause';
     }
   };
 
@@ -24,7 +25,12 @@
     <div class="{project.type}">
       <h3>{project.type}</h3>
       {#if project.type == 'video'}
-        <button on:click="{pauseVideo}">{buttonLabel}</button>
+        <button on:click="{pauseVideo}" class="{buttonLabel}">
+          <!-- <div> -->
+          <i class="fa fa-solid fa-pause"></i>
+          <i class="fa fa-solid fa-play"></i>
+          <!-- </div> -->
+        </button>
       {/if}
       <Grid
         projects="{project.data}"
@@ -52,15 +58,28 @@
 
   button {
     margin-left: 10px;
-    font-family: 'Source Sans Pro', sans-serif;
     background-color: #fafbfc;
     border: 1px solid rgba(27, 31, 35, 0.15);
     border-radius: 6px;
     box-shadow: rgb(27 31 35 / 10%) 0 1px 0,
       rgb(255 255 255 / 25%) 0 1px 0 inset;
     box-sizing: border-box;
-    color: #555;
-    transition: 0.4s all ease;
+    padding: 3px 8px;
+
+    i {
+      display: none;
+      font-size: 1rem;
+    }
+    &.play {
+      i.fa-play {
+        display: block;
+      }
+    }
+    &.pause {
+      i.fa-pause {
+        display: block;
+      }
+    }
   }
 
   button:hover {

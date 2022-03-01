@@ -85,25 +85,25 @@
         "type": "video",
         "data": [
             {
-                "headline": "Japan's “Blade Library”",
+                "headline": "“Blade Library”",
                 "dek": "A young Japanese amputee who dreams of becoming a Paralympian, remembers strapping on a prosthetic “running blade” for the first time.",
                 "videoSrc": "blade-runner",
-                "posterSrc": "",
-                "link": "https://www.reuters.com/article/us-japan-prosthetics-runners/japans-blade-library-offers-joy-of-blade-running-to-amputees-idUSKBN1CM0SI"
+                "posterSrc": "blade-runner-poster.jpg",
+                "link": "https://www.youtube.com/watch?v=djG_fM3WKL4"
+            },
+            {
+                "headline": "Circle of life",
+                "dek": "Japan's homeless banish despair through dance",
+                "videoSrc": "dancers",
+                "posterSrc": "dancers-poster.png",
+                "link": "https://www.youtube.com/watch?v=xp95A9DulYs"
             },
             {
                 "headline": "Dolling up",
                 "dek": "Meet Lulu Hashimoto, a “living doll” and the latest trend in Tokyo’s fashion modeling scene",
                 "videoSrc": "lulu",
-                "posterSrc": "",
-                "link": "https://www.reuters.com/article/us-japan-dollmodel/meet-lulu-hashimoto-the-living-doll-fashion-model-idUSKCN1B40QH"
-            },
-            {
-                "headline": "Circle of life",
-                "dek": "Japan's homeless banish despair through dance",
-                "videoSrc": "dance",
-                "posterSrc": "",
-                "link": "https://www.reuters.com/article/us-japan-homeless-dancers/circle-of-life-japans-homeless-banish-despair-through-dance-idUSKCN1BM1EM"
+                "posterSrc": "lulu-poster.png",
+                "link": "https://www.razor.tv/video/meet-lulu-hashimoto-japan-s-living-doll/4802324435001/5551360215001"
             }
         ]
     }
