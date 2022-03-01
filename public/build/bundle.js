@@ -898,7 +898,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "description svelte-iim3em");
+    			attr_dev(p, "class", "description svelte-41rtrd");
     			add_location(p, file$3, 18, 10, 488);
     		},
     		m: function mount(target, anchor) {
@@ -937,7 +937,7 @@ var app = (function () {
     			attr_dev(a, "href", /*award*/ ctx[0].link);
     			attr_dev(a, "target", "_blank");
     			add_location(a, file$3, 15, 12, 384);
-    			attr_dev(p, "class", "description svelte-iim3em");
+    			attr_dev(p, "class", "description svelte-41rtrd");
     			add_location(p, file$3, 14, 10, 348);
     		},
     		m: function mount(target, anchor) {
@@ -1003,15 +1003,15 @@ var app = (function () {
     			t5 = space();
     			if_block.c();
     			t6 = space();
-    			attr_dev(p0, "class", "award svelte-iim3em");
+    			attr_dev(p0, "class", "award svelte-41rtrd");
     			add_location(p0, file$3, 9, 6, 170);
-    			attr_dev(p1, "class", "org svelte-iim3em");
+    			attr_dev(p1, "class", "org svelte-41rtrd");
     			add_location(p1, file$3, 11, 8, 241);
-    			attr_dev(p2, "class", "year svelte-iim3em");
+    			attr_dev(p2, "class", "year svelte-41rtrd");
     			add_location(p2, file$3, 12, 8, 280);
-    			attr_dev(div0, "class", "details svelte-iim3em");
+    			attr_dev(div0, "class", "details svelte-41rtrd");
     			add_location(div0, file$3, 10, 6, 211);
-    			attr_dev(div1, "class", "container svelte-iim3em");
+    			attr_dev(div1, "class", "container svelte-41rtrd");
     			add_location(div1, file$3, 8, 4, 140);
     		},
     		m: function mount(target, anchor) {
@@ -1476,7 +1476,7 @@ var app = (function () {
     			attr_dev(a, "href", a_href_value = /*link*/ ctx[7]);
     			attr_dev(a, "class", "svelte-18b1dta");
     			add_location(a, file$2, 22, 8, 484);
-    			attr_dev(div1, "class", "project col-lg-4 col-md-4 col-sm-12 svelte-18b1dta");
+    			attr_dev(div1, "class", "project col-lg-4 col-md-6 col-sm-12 svelte-18b1dta");
     			add_location(div1, file$2, 21, 6, 426);
     		},
     		m: function mount(target, anchor) {

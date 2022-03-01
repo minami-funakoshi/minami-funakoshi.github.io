@@ -28,10 +28,9 @@
     display: flex;
     padding-left: 0;
 
-    .line-break {
-      display: none;
+    .details {
+      display: flex;
     }
-
     p {
       margin: 5px 0 0 0;
       font-weight: 300;

@@ -25,25 +25,3 @@
 <Awards />
 <Education />
 <Footer />
-
-<style lang="scss">
-  // :global(body) {
-  //   color: #333;
-  // 	margin: 0;
-  // 	padding: 8px;
-  // 	box-sizing: border-box;
-  // 	font-family: 'Source Sans Pro', sans-serif;
-  // }
-
-  // :global() {
-
-  // }
-
-  // :global() {
-
-  // }
-
-  // :global() {
-
-  // }
-</style>

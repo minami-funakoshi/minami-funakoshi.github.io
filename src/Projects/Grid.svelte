@@ -19,7 +19,7 @@
 <div class="container">
   <div class="row">
     {#each projects as { headline, dek, link, awards, imgSrc, videoSrc, posterSrc, headline, link }, i}
-      <div class="project col-lg-4 col-md-4 col-sm-12">
+      <div class="project col-lg-4 col-md-6 col-sm-12">
         <a target="_blank" href="{link}">
           {#if imgSrc}
             <img
