@@ -2244,16 +2244,13 @@ var app = (function () {
     function create_fragment(ctx) {
     	let intro;
     	let t0;
-    	let projects;
-    	let t1;
     	let awards;
-    	let t2;
+    	let t1;
     	let education;
-    	let t3;
+    	let t2;
     	let footer;
     	let current;
     	intro = new Intro({ $$inline: true });
-    	projects = new Projects({ $$inline: true });
     	awards = new Awards({ $$inline: true });
     	education = new Education({ $$inline: true });
     	footer = new Footer({ $$inline: true });
@@ -2262,12 +2259,10 @@ var app = (function () {
     		c: function create() {
     			create_component(intro.$$.fragment);
     			t0 = space();
-    			create_component(projects.$$.fragment);
-    			t1 = space();
     			create_component(awards.$$.fragment);
-    			t2 = space();
+    			t1 = space();
     			create_component(education.$$.fragment);
-    			t3 = space();
+    			t2 = space();
     			create_component(footer.$$.fragment);
     		},
     		l: function claim(nodes) {
@@ -2276,12 +2271,10 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			mount_component(intro, target, anchor);
     			insert_dev(target, t0, anchor);
-    			mount_component(projects, target, anchor);
-    			insert_dev(target, t1, anchor);
     			mount_component(awards, target, anchor);
-    			insert_dev(target, t2, anchor);
+    			insert_dev(target, t1, anchor);
     			mount_component(education, target, anchor);
-    			insert_dev(target, t3, anchor);
+    			insert_dev(target, t2, anchor);
     			mount_component(footer, target, anchor);
     			current = true;
     		},
@@ -2289,7 +2282,6 @@ var app = (function () {
     		i: function intro$1(local) {
     			if (current) return;
     			transition_in(intro.$$.fragment, local);
-    			transition_in(projects.$$.fragment, local);
     			transition_in(awards.$$.fragment, local);
     			transition_in(education.$$.fragment, local);
     			transition_in(footer.$$.fragment, local);
@@ -2297,7 +2289,6 @@ var app = (function () {
     		},
     		o: function outro(local) {
     			transition_out(intro.$$.fragment, local);
-    			transition_out(projects.$$.fragment, local);
     			transition_out(awards.$$.fragment, local);
     			transition_out(education.$$.fragment, local);
     			transition_out(footer.$$.fragment, local);
@@ -2306,12 +2297,10 @@ var app = (function () {
     		d: function destroy(detaching) {
     			destroy_component(intro, detaching);
     			if (detaching) detach_dev(t0);
-    			destroy_component(projects, detaching);
-    			if (detaching) detach_dev(t1);
     			destroy_component(awards, detaching);
-    			if (detaching) detach_dev(t2);
+    			if (detaching) detach_dev(t1);
     			destroy_component(education, detaching);
-    			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(t2);
     			destroy_component(footer, detaching);
     		}
     	};
