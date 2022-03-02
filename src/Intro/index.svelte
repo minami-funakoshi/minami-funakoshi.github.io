@@ -55,8 +55,9 @@
     margin-bottom: 0;
     margin-left: -5px;
 
-    @media only screen and (max-width: 530px) {
+    @media only screen and (max-width: 576px) {
       font-size: 3rem;
+      margin-left: 0;
     }
   }
 
@@ -67,6 +68,10 @@
       margin-right: 12.5px;
       font-weight: 300;
       color: #555;
+      @media only screen and (max-width: 576px) {
+        font-size: 1rem;
+        // margin-left: 5px;
+      }
     }
 
     p:not(:first-child)::before {

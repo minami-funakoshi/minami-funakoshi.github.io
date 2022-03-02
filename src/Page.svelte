@@ -25,3 +25,48 @@
 <Awards />
 <Education />
 <Footer />
+
+<style lang="scss">
+  :global(body) {
+    color: #333;
+    margin: 0;
+    padding: 8px;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  :global(section) {
+    padding-top: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  :global(hr) {
+    margin-top: 0;
+    max-width: 1000px;
+  }
+
+  :global(h2) {
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+
+  :global(a),
+  :global(a:visited) {
+    color: rgb(0, 100, 200);
+    text-decoration: underline;
+  }
+
+  :global(a:hover) {
+    color: #609bb6;
+  }
+
+  :global(p) {
+    font-size: 1.1rem;
+  }
+
+  :global(strong) {
+    color: #555;
+    font-weight: 600;
+  }
+</style>
