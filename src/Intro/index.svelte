@@ -70,7 +70,7 @@
       color: #555;
       @media only screen and (max-width: 576px) {
         font-size: 1rem;
-        margin-right: 10px;
+        margin-right: 7.5px;
       }
     }
 
@@ -81,7 +81,7 @@
       margin-right: 12.5px;
 
       @media only screen and (max-width: 576px) {
-        margin-right: 10px;
+        margin-right: 7.5px;
       }
     }
   }
