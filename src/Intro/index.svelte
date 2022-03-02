@@ -57,7 +57,7 @@
 
     @media only screen and (max-width: 576px) {
       font-size: 3rem;
-      margin-left: -3px;
+      margin-left: -0.2rem;
     }
   }
 
