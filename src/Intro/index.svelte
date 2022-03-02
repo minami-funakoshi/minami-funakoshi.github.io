@@ -70,6 +70,7 @@
       color: #555;
       @media only screen and (max-width: 576px) {
         font-size: 1rem;
+        margin-right: 10px;
       }
     }
 
@@ -78,6 +79,10 @@
       font-weight: 400;
       color: #bbb;
       margin-right: 12.5px;
+
+      @media only screen and (max-width: 576px) {
+        margin-right: 10px;
+      }
     }
   }
 
