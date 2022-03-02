@@ -53,11 +53,11 @@
     font-weight: 500;
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: -5px;
+    margin-left: -0.35rem;
 
     @media only screen and (max-width: 576px) {
       font-size: 3rem;
-      margin-left: 0;
+      // margin-left: 0;
     }
   }
 
