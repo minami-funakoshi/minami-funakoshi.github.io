@@ -33,13 +33,19 @@
                 "headline": "Hot and humid Olympic summer",
                 "dek": "Tokyo’s sweltering summer heightens the risk of heat illness at the 2020 Olympics",
                 "imgSrc": "olympics.png",
-                "link": "https://graphics.reuters.com/OLYMPICS-2020/SUMMER-HEAT/bdwvkogrzvm/index.html"
+                "link": "https://graphics.reuters.com/OLYMPICS-2020/SUMMER-HEAT/bdwvkogrzvm/index.html",
+                "awards": [
+                    "<strong>Award of Excellence</strong> | SND"
+                ]
             },
             {
                 "headline": "Myanmar’s internet suppression",
                 "dek": "Crackdowns on protesters in the street are mirrored by its rising restrictions online",
                 "imgSrc": "myanmar.png",
-                "link": "https://graphics.reuters.com/MYANMAR-POLITICS/INTERNET-RESTRICTION/rlgpdbreepo/index.html"
+                "link": "https://graphics.reuters.com/MYANMAR-POLITICS/INTERNET-RESTRICTION/rlgpdbreepo/index.html",
+                "awards": [
+                    "<strong>Award of Excellence</strong> | SND"
+                ]
             },
             {
                 "headline": "Speed and trust",

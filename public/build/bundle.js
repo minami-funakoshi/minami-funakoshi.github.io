@@ -672,17 +672,17 @@ var app = (function () {
     			t23 = space();
     			a5 = element("a");
     			i2 = element("i");
-    			attr_dev(h1, "class", "svelte-fj27eb");
+    			attr_dev(h1, "class", "svelte-1bw3zd6");
     			add_location(h1, file$4, 1, 2, 26);
-    			attr_dev(p0, "class", "svelte-fj27eb");
+    			attr_dev(p0, "class", "svelte-1bw3zd6");
     			add_location(p0, file$4, 3, 4, 82);
-    			attr_dev(p1, "class", "svelte-fj27eb");
+    			attr_dev(p1, "class", "svelte-1bw3zd6");
     			add_location(p1, file$4, 4, 4, 103);
-    			attr_dev(p2, "class", "svelte-fj27eb");
+    			attr_dev(p2, "class", "svelte-1bw3zd6");
     			add_location(p2, file$4, 5, 4, 125);
-    			attr_dev(p3, "class", "svelte-fj27eb");
+    			attr_dev(p3, "class", "svelte-1bw3zd6");
     			add_location(p3, file$4, 6, 4, 144);
-    			attr_dev(div0, "class", "short-bio svelte-fj27eb");
+    			attr_dev(div0, "class", "short-bio svelte-1bw3zd6");
     			add_location(div0, file$4, 2, 2, 54);
     			attr_dev(a0, "target", "_blank");
     			attr_dev(a0, "href", "https://graphics.reuters.com/");
@@ -698,27 +698,27 @@ var app = (function () {
     			add_location(p6, file$4, 25, 4, 939);
     			attr_dev(div1, "class", "full-bio");
     			add_location(div1, file$4, 8, 2, 172);
-    			attr_dev(i0, "class", "fa fa-twitter svelte-fj27eb");
+    			attr_dev(i0, "class", "fa fa-twitter svelte-1bw3zd6");
     			add_location(i0, file$4, 33, 7, 1157);
     			attr_dev(a3, "target", "_blank");
     			attr_dev(a3, "href", "https://twitter.com/MinamiFunakoshi");
-    			attr_dev(a3, "class", "svelte-fj27eb");
+    			attr_dev(a3, "class", "svelte-1bw3zd6");
     			add_location(a3, file$4, 32, 4, 1088);
-    			attr_dev(i1, "class", "fa fa-envelope svelte-fj27eb");
+    			attr_dev(i1, "class", "fa fa-envelope svelte-1bw3zd6");
     			add_location(i1, file$4, 36, 7, 1268);
     			attr_dev(a4, "target", "_blank");
     			attr_dev(a4, "href", "mailto: minami.funakoshi@gmail.com");
-    			attr_dev(a4, "class", "svelte-fj27eb");
+    			attr_dev(a4, "class", "svelte-1bw3zd6");
     			add_location(a4, file$4, 35, 4, 1200);
-    			attr_dev(i2, "class", "fa fa-linkedin svelte-fj27eb");
+    			attr_dev(i2, "class", "fa fa-linkedin svelte-1bw3zd6");
     			add_location(i2, file$4, 39, 7, 1385);
     			attr_dev(a5, "target", "_blank");
     			attr_dev(a5, "href", "https://www.linkedin.com/in/mfunakoshi/");
-    			attr_dev(a5, "class", "svelte-fj27eb");
+    			attr_dev(a5, "class", "svelte-1bw3zd6");
     			add_location(a5, file$4, 38, 4, 1312);
-    			attr_dev(div2, "class", "contact svelte-fj27eb");
+    			attr_dev(div2, "class", "contact svelte-1bw3zd6");
     			add_location(div2, file$4, 31, 2, 1062);
-    			attr_dev(section, "class", "intro svelte-fj27eb");
+    			attr_dev(section, "class", "intro svelte-1bw3zd6");
     			add_location(section, file$4, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -809,6 +809,20 @@ var app = (function () {
 
     var awards = [
     	{
+    		award: "Award of Excellence",
+    		org: "Society for News Design (SND)",
+    		year: 2022,
+    		description: "Hot and humid Olympic summer",
+    		link: "https://graphics.reuters.com/OLYMPICS-2020/SUMMER-HEAT/bdwvkogrzvm/index.html"
+    	},
+    	{
+    		award: "Award of Excellence",
+    		org: "SND",
+    		year: 2022,
+    		description: "Myanmar internet suppression",
+    		link: "https://graphics.reuters.com/MYANMAR-POLITICS/INTERNET-RESTRICTION/rlgpdbreepo/index.html"
+    	},
+    	{
     		award: "Bronze medal",
     		org: "Malofiej29",
     		year: 2021,
@@ -822,7 +836,7 @@ var app = (function () {
     	},
     	{
     		award: "Silver medal",
-    		org: "Society for News Design (SND)",
+    		org: "SND",
     		year: 2021,
     		description: "Portfolio: Art Direction"
     	},
@@ -1775,13 +1789,19 @@ var app = (function () {
     				headline: "Hot and humid Olympic summer",
     				dek: "Tokyo’s sweltering summer heightens the risk of heat illness at the 2020 Olympics",
     				imgSrc: "olympics.png",
-    				link: "https://graphics.reuters.com/OLYMPICS-2020/SUMMER-HEAT/bdwvkogrzvm/index.html"
+    				link: "https://graphics.reuters.com/OLYMPICS-2020/SUMMER-HEAT/bdwvkogrzvm/index.html",
+    				awards: [
+    					"<strong>Award of Excellence</strong> | SND"
+    				]
     			},
     			{
     				headline: "Myanmar’s internet suppression",
     				dek: "Crackdowns on protesters in the street are mirrored by its rising restrictions online",
     				imgSrc: "myanmar.png",
-    				link: "https://graphics.reuters.com/MYANMAR-POLITICS/INTERNET-RESTRICTION/rlgpdbreepo/index.html"
+    				link: "https://graphics.reuters.com/MYANMAR-POLITICS/INTERNET-RESTRICTION/rlgpdbreepo/index.html",
+    				awards: [
+    					"<strong>Award of Excellence</strong> | SND"
+    				]
     			},
     			{
     				headline: "Speed and trust",

@@ -1,5 +1,19 @@
 [
     {
+        "award": "Award of Excellence",
+        "org": "Society for News Design (SND)",
+        "year": 2022,
+        "description": "Hot and humid Olympic summer",
+        "link": "https://graphics.reuters.com/OLYMPICS-2020/SUMMER-HEAT/bdwvkogrzvm/index.html"
+    },
+    {
+        "award": "Award of Excellence",
+        "org": "SND",
+        "year": 2022,
+        "description": "Myanmar internet suppression",
+        "link": "https://graphics.reuters.com/MYANMAR-POLITICS/INTERNET-RESTRICTION/rlgpdbreepo/index.html"
+    },
+    {
         "award": "Bronze medal",
         "org": "Malofiej29",
         "year": 2021,
@@ -13,7 +27,7 @@
     },
     {
         "award": "Silver medal",
-        "org": "Society for News Design (SND)",
+        "org": "SND",
         "year": 2021,
         "description": "Portfolio: Art Direction"
     },
