@@ -12,8 +12,8 @@
         target="_blank"
         href="https://graphics.reuters.com/">Reuters</a
       >
-      based in Austin, Texas. They report, write, code, make data visualisations
-      and develop tools. They do backend and frontend development: for the live results
+      based in Austin, Texas. They report, write, code, make data visualisations,
+      develop tools, and do both backend and frontend development. For the live results
       page for the 2022 U.S. election, they developed a
       <a
         href="https://www.npmjs.com/package/election-tonight-client"
