@@ -9,9 +9,15 @@
                 "posterSrc": "gender-poster.png",
                 "link": "https://www.reuters.com/graphics/GENDER-LANGUAGE/LGBT/mopanqoelva/index.html",
                 "awards": [
-                    "<strong>Gold medal</strong> | Information is Beautiful",
+                    "<strong>Gold</strong> | Information is Beautiful",
                     "<strong>Finalist</strong> | Online Journalism Awards"
                 ]
+            },
+            {
+                "headline": "2022 U.S. election",
+                "dek": "Worked on backend and frontend development for a live-updating results page. Skills: Svelte, svelte-kit, node, javaScript",
+                "imgSrc": "2022elex.jpg",
+                "link": "https://www.reuters.com/graphics/USA-ELECTION/RESULTS/dwvkdgzdqpm/"
             },
             {
                 "headline": "Vaccine bootcamp",
@@ -20,8 +26,8 @@
                 "link": "https://graphics.reuters.com/HEALTH-CORONAVIRUS/VACCINE/yzdpxqxnwvx/index.html",
                 "awards": [
                     "test",
-                    "<strong>Bronze medal</strong> | Malofiej29",
-                    "<strong>Silver medal</strong> | SND"
+                    "<strong>Bronze</strong> | Malofiej29",
+                    "<strong>Silver</strong> | SND"
                 ]
             },
             {
