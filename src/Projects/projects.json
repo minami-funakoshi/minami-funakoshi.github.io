@@ -4,10 +4,14 @@
         "data": [
             {
                 "headline": "Gender and language",
-                "dek": "The movement to recognize a spectrum of genders is changing languages around the world",
+                "dek": "The movement to recognise a spectrum of genders is changing languages around the world",
                 "videoSrc": "gender-cropped",
                 "posterSrc": "gender-poster.png",
-                "link": "https://graphics.reuters.com/GENDER-LANGUAGE/LGBT/mopanqoelva/index.html"
+                "link": "https://graphics.reuters.com/GENDER-LANGUAGE/LGBT/mopanqoelva/index.html",
+                "awards": [
+                    "<strong>Gold medal</strong> | Information is Beautiful",
+                    "<strong>Finalist</strong> | Online Journalism Awards"
+                ]
             },
             {
                 "headline": "Vaccine bootcamp",
@@ -15,6 +19,7 @@
                 "imgSrc": "vax-bootcamp.png",
                 "link": "https://graphics.reuters.com/HEALTH-CORONAVIRUS/VACCINE/yzdpxqxnwvx/index.html",
                 "awards": [
+                    "test",
                     "<strong>Bronze medal</strong> | Malofiej29",
                     "<strong>Silver medal</strong> | SND"
                 ]
