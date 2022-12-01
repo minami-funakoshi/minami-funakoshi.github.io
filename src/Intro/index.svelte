@@ -19,7 +19,7 @@
         href="https://www.npmjs.com/package/election-tonight-client"
         target="_blank">client</a
       >
-      for Edison Research's ElectionTonight API.
+      for Edison Research’s ElectionTonight API.
     </p>
     <p>
       They have also worked as a lecturer and mentor at Columbia Journalism
@@ -30,7 +30,7 @@
       Previously, they were a <a
         href="https://www.reuters.com/journalists/minami-funakoshi"
         target="_blank">Reuters Tokyo correspondent</a
-      > reporting on Japan&#8217;s economy, immigration, politics and the auto industry.
+      > covering Japan&#8217;s economy, immigration, politics and the auto industry.
       They were also a video journalist for Reuters Video News.
     </p>
     <p>
