@@ -13,7 +13,17 @@
         href="https://graphics.reuters.com/">Reuters</a
       >
       based in Austin, Texas. They report, write, code, make data visualisations
-      and develop tools. They have worked as a mentor at Columbia Journalism School’s
+      and develop tools. They do backend and frontend development: for the live results
+      page for the 2022 U.S. election, they developed a
+      <a
+        href="https://www.npmjs.com/package/election-tonight-client"
+        target="_blank">client</a
+      >
+      for Edison Research's ElectionTonight API.
+    </p>
+    <p>
+      They have also worked as a lecturer and mentor at Columbia Journalism
+      School’s
       <a href="https://ledeprogram.com/" target="_blank">Lede </a> programme.
     </p>
     <p>
