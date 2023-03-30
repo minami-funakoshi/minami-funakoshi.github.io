@@ -14,6 +14,12 @@
                 ]
             },
             {
+                "headline": "Why California is still in drought despite heavy rain and snow",
+                "dek": "Multiple atmospheric rivers and frigid storms brought extreme rain and snow to California, but the golden state is still stuck in a years-long, ongoing drought.",
+                "imgSrc": "california-drought.jpg",
+                "link": "https://www.reuters.com/graphics/CLIMATE-CHANGE/CALIFORNIA-DROUGHT/byvrlqxqnve/index.html"
+            },
+            {
                 "headline": "2022 U.S. election",
                 "dek": "Worked on backend and frontend development for a live-updating results page. Skills: Svelte, svelte-kit, node, javaScript",
                 "imgSrc": "2022elex.jpg",
