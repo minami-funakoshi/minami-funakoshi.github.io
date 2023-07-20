@@ -1,5 +1,26 @@
 [
     {
+        "award": "Excellence in Nonbinary and Gender Nonconforming Coverage Award",
+        "org": "NLGJA: The Association of LGBTQ+ Journalists",
+        "year": 2023,
+        "description": "Gender and Language",
+        "link": "https://www.reuters.com/graphics/GENDER-LANGUAGE/LGBT/mopanqoelva/index.html"
+    },
+    {
+        "award": "Silver",
+        "org": "Society for News Design (SND)",
+        "year": 2023,
+        "description": "Gender and Language",
+        "link": "https://www.reuters.com/graphics/GENDER-LANGUAGE/LGBT/mopanqoelva/index.html"
+    },
+    {
+        "award": "Finalist",
+        "org": "Reuters Graphic of the Year",
+        "year": 2023,
+        "description": "Gender and Language",
+        "link": "https://www.reuters.com/graphics/GENDER-LANGUAGE/LGBT/mopanqoelva/index.html"
+    },
+    {
         "award": "Gold",
         "org": "Information is Beautiful",
         "year": 2022,
@@ -15,7 +36,7 @@
     },
     {
         "award": "Award of Excellence",
-        "org": "Society for News Design (SND)",
+        "org": "SND",
         "year": 2022,
         "description": "Hot and humid Olympic summer",
         "link": "https://graphics.reuters.com/OLYMPICS-2020/SUMMER-HEAT/bdwvkogrzvm/index.html"

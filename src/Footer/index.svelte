@@ -1,5 +1,5 @@
 <section class="footer">
-  <p>Updated March 2023</p>
+  <p>Updated July 2023</p>
 </section>
 
 <style lang="scss">
