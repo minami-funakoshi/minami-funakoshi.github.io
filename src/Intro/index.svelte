@@ -48,8 +48,7 @@
     >
     <a target="_blank" href="https://www.linkedin.com/in/minami-funakoshi/"
       ><i class="fa fa-linkedin"></i></a
-    >
-  </div>
+    > </div>
 </section>
 
 <style lang="scss">
