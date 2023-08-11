@@ -46,7 +46,7 @@
     <a target="_blank" href="mailto: minami.funakoshi@gmail.com"
       ><i class="fa fa-envelope"></i></a
     >
-    <a target="_blank" href="https://www.linkedin.com/in/mfunakoshi/"
+    <a target="_blank" href="https://www.linkedin.com/in/minami-funakoshi/"
       ><i class="fa fa-linkedin"></i></a
     >
   </div>
