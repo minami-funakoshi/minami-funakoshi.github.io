@@ -3,6 +3,12 @@
         "type": "graphics",
         "data": [
             {
+                "headline": "The rise of anti-trans bills in the US",
+                "dek": "How anti-trans bills in the U.S. restrict access to gender-affirming healthcare",
+                "imgSrc": "bills.png",
+                "link": "https://www.reuters.com/graphics/USA-HEALTHCARE/TRANS-BILLS/zgvorreyapd/"
+            },
+            {
                 "headline": "Gender and language",
                 "dek": "The movement to recognise a spectrum of genders is changing languages around the world",
                 "videoSrc": "gender-cropped",
