@@ -42,7 +42,7 @@
     <a target="_blank" href="https://twitter.com/MinamiFunakoshi"
       ><i class="fa fa-twitter"></i></a
     >
-    <a target="_blank" href="mailto: minami.funakoshi@gmail.com"
+    <a target="_blank" href="mailto: mfunakoshi@proton.me"
       ><i class="fa fa-envelope"></i></a
     >
     <a target="_blank" href="https://www.linkedin.com/in/minami-funakoshi/"
