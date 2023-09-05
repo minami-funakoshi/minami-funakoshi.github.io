@@ -11,7 +11,7 @@
       Minami Funakoshi is a nonbinary graphics journalist at <a
         target="_blank"
         href="https://graphics.reuters.com/">Reuters</a
-      >. They report, write, code, make data visualisations,
+      > and is on the board of the <a target='_blank' href='https://www.transjournalists.org/'>Trans Journalists Association</a>. They report, write, code, make data visualisations,
       develop tools, and do both backend and frontend development. For the live results
       page for the 2022 U.S. election, they developed a
       <a
